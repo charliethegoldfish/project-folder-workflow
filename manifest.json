@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "project-folder-workflow",
+	"name": "Project Folder Workflow",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
+	"description": "Allows easy setting up and configuring of projects in folders.",
+	"author": "Charlie Cassidy",
+	"authorUrl": "https://www.charliethegoldfish.com/about/",
 	"fundingUrl": "https://obsidian.md/pricing",
 	"isDesktopOnly": false
 }
