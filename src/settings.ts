@@ -23,7 +23,7 @@ export class ProjectFolderSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Project Root')
+			.setName('Project root')
 			.setDesc("Path to the root of where projects will be stored")
 			.addText((text) =>
 				text

@@ -1,7 +1,4 @@
 import {
-	Editor,
-	MarkdownView,
-	MarkdownFileInfo,
 	Modal,
 	Notice,
 	Plugin,
@@ -33,7 +30,7 @@ export default class ProjectFolder extends Plugin {
 		// This adds a simple command that can be triggered anywhere
 		this.addCommand({
 			id: 'create-project',
-			name: 'Create Project',
+			name: 'Create project',
 			callback: () => {
 				new ProjectModel(this.app).open();
 			},
