@@ -2,14 +2,14 @@ import { App, PluginSettingTab, Setting } from 'obsidian';
 import ProjectFolder from './main';
 
 export interface ProjectFolderSettings {
-	mySetting: string;
+	projectRootPath: string;
 }
 
 export const DEFAULT_SETTINGS: ProjectFolderSettings = {
-	mySetting: 'default',
+	projectRootPath: '',
 };
 
-export class SampleSettingTab extends PluginSettingTab {
+export class ProjectFolderSettingTab extends PluginSettingTab {
 	plugin: ProjectFolder;
 
 	constructor(app: App, plugin: ProjectFolder) {
@@ -23,14 +23,14 @@ export class SampleSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Settings #1')
-			.setDesc("It's a secret")
+			.setName('Project Root')
+			.setDesc("Path to the root of where projects will be stored")
 			.addText((text) =>
 				text
-					.setPlaceholder('Enter your secret')
-					.setValue(this.plugin.settings.mySetting)
+					.setPlaceholder('')
+					.setValue(this.plugin.settings.projectRootPath)
 					.onChange(async (value) => {
-						this.plugin.settings.mySetting = value;
+						this.plugin.settings.projectRootPath = value;
 						await this.plugin.saveSettings();
 					}),
 			);
